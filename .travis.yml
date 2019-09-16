@@ -14,7 +14,7 @@ after_success:
   - docker build -t sumitdba10/multi-server ./server
   - docker build -t sumitdba10/multi-worker ./worker
   # Log into the docker CLI
-   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # take those images and push to Docker Hub
   - docker push sumitdba10/multi-client
